@@ -1,6 +1,5 @@
 -- Defining the notes object attributes
 Note = {
-	id = "",
 	title = "",
 	description = "",
 }
@@ -22,18 +21,10 @@ function Note:getDescription(s)
 	return self.description;
 end
 
-function Note:setId(s)
-	self.id = s;
-end
-
-function Note:getId(s)
-	self.id = s;
-end
-
 -- Define the constructor
 function Note:new(t)
-	t = t or {}
-	setmetatable(t, self)
-	self.__index = self
-	return t
+	t = t or {};
+	setmetatable(t, self);
+	self.__index = self;
+	return t;
 end
